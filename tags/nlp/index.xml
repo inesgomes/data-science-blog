@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NLP on Data Science Wiki</title>
+    <link>/tags/nlp/</link>
+    <description>Recent content in NLP on Data Science Wiki</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 23 Nov 2019 15:38:27 +0200</lastBuildDate>
+    
+	<atom:link href="/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>BERT: Bidirectional Encoder Representations from Transformers</title>
+      <link>/posts/bert/</link>
+      <pubDate>Sat, 23 Nov 2019 15:38:27 +0200</pubDate>
+      
+      <guid>/posts/bert/</guid>
+      <description>BERT is a pre-training NLP technique developed by Google. It has caused excitement in ML field given its state-of-the-art results.</description>
+    </item>
+    
+  </channel>
+</rss>
