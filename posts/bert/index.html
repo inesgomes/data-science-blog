@@ -130,9 +130,53 @@
   </header>
   <div class="delimiter"></div>
   <section>
-    <p><a href="https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270">https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270</a></p>
+    
 
-<p><a href="https://arxiv.org/pdf/1810.04805.pdf">https://arxiv.org/pdf/1810.04805.pdf</a></p>
+<h3 id="introduction">Introduction</h3>
+
+<p>With so much hype around BERT, it was time to study it a little bit deeper. BERT is a pre-trained language model for Natural Language Processing (NLP) developed by Google AI Language researchers. A pre-trained language model is a model that was previously trained in a huge corpus and can capture several components of a language such as long-term dependencies, hierarchical relations, or sentiment. These models are effective for improving many NLP tasks. Examples include Question Answering (Q&amp;A), Natural Language Inference (NLI) or Named Entity Recognition (NER).</p>
+
+<h3 id="background">Background</h3>
+
+<p>BERT, as the name discloses, is a Bidirectional Encoder Representations from Transformers. A <strong>Transformer</strong> is an attention mechanism that learns contextual relations between words, or sub-words, in a text. The Transformer includes an encoder that reads the text input and a decoder that produces a prediction for the task. BERT innovates state of the art by transforming unidirectional self-attention into <strong>bidirectional</strong>. In other words, instead of reading the text input sequentially, that is, every token can only attend to context to its left (or right), it reads the entire sequence at once.</p>
+
+<h3 id="architecture">Architecture</h3>
+
+<p>BERT implementation is divided into two steps: <em>pre-training</em> and <em>fine-tuning</em>. The former, train the model in unlabeled data, while the latter initializes the model with the pre-trained parameters and fine-tunes them using labelled data. Next figure describes a BERT input, where <em>E</em> is an embedding, i.e. a vector representation of the token that includes its context.</p>
+
+<p><img src="../input.png" alt="input" /></p>
+
+<p>Regarding the BERT pre-training, the authors start by defining a prediction goal. When using unidirectional self-attention models, it is possible to simply predict the next word in a sequence, but in a bidirectional approach, it would allow each word to &ldquo;see itself&rdquo;. Therefore, BERT uses two methods to pre-train the model: <em>Masked LM</em> and <em>Next Sentence Prediction</em>. Masked LM (MLM) method masks some percentage (in this case 15%) of the input tokens randomly. The final hidden vectors corresponding to the mask tokens are fed into an output softmax, to predict the masked words based on the context provided by the non-masked words in the sequence. This method drawback is the creation of a mismatch between pre-training and fine-tuning (since the masked token does not appear during fine-tunning). For further details see the <a href="https://arxiv.org/pdf/1810.04805.pdf">original paper</a>. On the other hand, in the <em>Next Sentence Prediction</em> BERT improves the understanding of the relationship between two sentences, predicting if the second sentence in the pair is the next in the original document. To achieve it, during training 50% of the time, the next sentence is the subsequent sentence and the other half is a random sentence from the document. Finally, when training the BERT model, Masked LM and Next Sentence Prediction are trained together, to minimize the combined loss function of the two strategies.</p>
+
+<p>After pre-taining BERT, the fine-tunning step occurs when training the model to specific tasks (our project). For each task, we simply plug in the task-specific inputs and outputs into BERT and fine-tune all the parameters end-to-end. In this case, we may add new classification layers.</p>
+
+<h3 id="final-remarks">Final Remarks</h3>
+
+<!--, that learn general language representations by fine-tunning all pre-trained parameters -> fine tuning apporach -->
+
+<p>In order to better understand BERT, the authors perform a set of experiments concluding that:</p>
+
+<ul>
+<li>Model size matters, even at huge scale</li>
+<li>With enough training data we achieve better accuracy</li>
+</ul>
+
+<h2 id="bibliography">Bibliography</h2>
+
+<p><a href="https://arxiv.org/pdf/1810.04805.pdf">Original Paper</a> and <a href="https://github.com/google-research/bert">Github code</a>.</p>
+
+<p>Data Skeptic Podcast series: <a href="https://dataskeptic.com/blog/episodes/2019/bert">BERT</a>, <a href="https://dataskeptic.com/blog/episodes/2019/bert-is-magic">BERT is magic</a> and <a href="https://dataskeptic.com/blog/episodes/2019/bert-is-shallow">BERT is shallow</a>.</p>
+
+<p><a href="https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270">BERT Explained: State of the art language model for NLP</a> blogpost.</p>
+
+<h2 id="similar-topics">Similar Topics</h2>
+
+<ul>
+<li><a href="https://openai.com/blog/better-language-models/">OpenAI GPT-2</a></li>
+<li><a href="https://arxiv.org/abs/1812.10860">ELMo</a></li>
+<li>GLUE</li>
+<li>Word embeddings</li>
+</ul>
 
   </section>
   
