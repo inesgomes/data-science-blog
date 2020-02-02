@@ -31,9 +31,19 @@ Academic Background: BSc./MSc. in Informatics and Computing Engineering</descrip
       <description>Topics that I&amp;rsquo;m not confortable with, but that I&amp;rsquo;d like to explore:
  Machine Learning:  Transfer Learning Active Learning
   Natural Language Processing:  Word Embeddings
- Enconders and Decorders  Data Engineering:  Spark and Hadoop
- Kubernets
-   </description>
+ Enconders and Decorders  Engineering:  Machine Leaning End-to-end Data engineering as a job   </description>
+    </item>
+    
+    <item>
+      <title>Glossary</title>
+      <link>/pages/glossary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/pages/glossary/</guid>
+      <description>Glossary with several platforms, tools, models and benchmarks. Just to be aware of the newest trends.
+A Airflow (Apache): platform created by community to programmatically author, schedule and monitor workflows. Is scalable, dynamic, extensible and elegant.
+AutoML (Google): train high-quality custom machine learning models with minimal effort and machine learning expertise.
+B Batch Jobs: jobs that can run without end user interaction, or can be scheduled to run as resources permit.</description>
     </item>
     
     <item>
@@ -42,7 +52,7 @@ Academic Background: BSc./MSc. in Informatics and Computing Engineering</descrip
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/pages/links/</guid>
-      <description>Content  Blogposts Resources and Tutorials Papers Books Podcasts Newsletters and Blogs Courses  Internet is a powerful resource to share knowledge. With diverse contributors around the world and distinct channels to disseminate information (e.g., audio, text, video), it is crucial to select the most appropriate ones according to our purpose. So, on this page, I select the most valuable links to knowledge, that I have encountered during my research, study or spare time.</description>
+      <description>Content  Blogposts Resources and Tutorials Papers Books Podcasts Newsletters and Blogs Courses Glossary  Internet is a powerful resource to share knowledge. With diverse contributors around the world and distinct channels to disseminate information (e.g., audio, text, video), it is crucial to select the most appropriate ones according to our purpose. So, on this page, I select the most valuable links to knowledge, that I have encountered during my research, study or spare time.</description>
     </item>
     
   </channel>
