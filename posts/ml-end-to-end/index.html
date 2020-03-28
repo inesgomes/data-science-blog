@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta property="og:title" content=" Machine Learning End-to-end &middot;  Data Science Wiki" />
+  
+    <meta name="theme-color" content="#hexcolor" />
+  
+  <meta property="og:site_name" content="Data Science Wiki" />
+  <meta property="og:url" content="/posts/ml-end-to-end/" />
+  
+  
+    <meta property="og:type" content="article" />
+    
+    <meta property="og:article:published_time" content="2020-03-28T23:20:00Z" />
+    
+      <meta property="og:article:tag" content="Engineering" />
+    
+  
+
+  <title>
+     Machine Learning End-to-end &middot;  Data Science Wiki
+  </title>
+
+  <link rel="alternative stylesheet" href="/css/bootstrap.min.css" />
+  
+  <link rel="stylesheet" href="/css/all.css">
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/github.css" />
+  <link rel="stylesheet" href="/css/color-theme.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
+  <link rel="shortcut icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+  
+
+  
+</head>
+<body>
+  
+  <header class="global-header"  style="background-image:url(/images/bg-dark.png)">
+  
+    <section class="header-text">
+      <h1><a href="/">Data Science Wiki</a></h1>
+      
+        <h4 class="tag-line">
+          <i>&#34;All data has its beauty, but not everyone sees it &#34; - Damian Mingle </i>
+        </h4>
+      
+      
+        <a class="btn btn-default btn-home" href="/">
+          <i class="fa fa-angle-left" aria-hidden="true"></i>
+          &nbsp;Home
+        </a>
+      
+      
+      <div class="navbar-container">
+        
+          <a class="btn btn-default navbar-item" href="/pages/about">
+            About
+          </a>
+        
+          <a class="btn btn-default navbar-item" href="/tags">
+            Content
+          </a>
+        
+          <a class="btn btn-default navbar-item" href="/pages/future">
+            Future Content
+          </a>
+        
+          <a class="btn btn-default navbar-item" href="/pages/links">
+            Links
+          </a>
+        
+        
+        <div class="sns-links hidden-print">
+  
+    <a href="mailto:gomes.inesisabel@gmail.com">
+      <i class="fa fa-envelope"></i>
+    </a>
+  
+  
+  
+  
+  
+  
+    <a href="https://github.com/inesgomes" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+  
+  
+  
+  
+  
+  
+    <a href="https://linkedin.com/in/inesgomes778" target="_blank">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  
+  
+  <a href="https://www.kaggle.com/inesgomes" target="_blank">
+    <i class="fab fa-kaggle"></i>
+  </a>
+  
+  
+</div>
+
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </section>
+  </header>
+  <main class="container">
+
+
+
+<article>
+  <header class="article-title">
+    <h2 class="text-primary">Machine Learning End-to-end</h2>
+  </header>
+  <div class="delimiter"></div>
+  <section>
+    
+
+<p>Data Science is a field of study that has been developing at a fast pace in the last years as a result of considerable research in the Machine Learning area, but also by the impact that it has been causing in our society. With this in mind, companies are investing in AI creating research teams to innovate their products. Nevertheless, the produced models must be productized to deliver real-time predictions and create business impact. With this intention, Software Engineers with Machine Learning skills are needed to architect and build Machine Learning pipelines that allow real-time predictions. These individuals that usually have Computer Science background allied with AI, Maths and Statistics are the <strong>Machine Learning Engineers</strong>. Data Scientists (that ideally also have Engineering skills) must work with ML Engineers to define the pipeline and productize their research. In this blog post, I&rsquo;m sharing some content related to the role of and ML engineer in a company (see <a href="##Bibliography">Bibliography</a>) and I&rsquo;m detailing on how to productize Machine Learning (because this is the skill that the Data Scientists need to acquire 😉).</p>
+
+<h3 id="machine-learning-lifecycle">Machine Learning Lifecycle</h3>
+
+<p>Figure 1 shows an example of an ML pipeline. While most Data Scientists are familiarized with the steps <em>one</em> to <em>six</em>, the last two may be challenging for the most part. However, while for the most times Researchers may be working <em>offline</em> (i.e., on their notebooks with previously collected data), in order to productize their models, Machine Learning engineers must architect this pipeline to feed the models with real-time data. This leads us to the definition of two important components:</p>
+
+<ul>
+<li><em>Online Model Analytics</em>: the model is applied for real-time decision making;</li>
+<li><em>Offline Data Discovery</em>: analysis on historical data to create the ML model in a batch-processing mode.</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th align="center"><img src="../images/ml_pipeline.png" alt="input" /></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center"><em>Figure 1: Machine Learning Pipeline illustrated by Semi Koen in <a href="https://towardsdatascience.com/architecting-a-machine-learning-pipeline-a847f094d1c7">Architecting a Machine Learning Pipeline</a> blog post.</em></td>
+</tr>
+
+<tr>
+<td align="center">_</td>
+</tr>
+</tbody>
+</table>
+
+<p>Figure 2 shows a more detailed pipeline that includes both the <em>online</em> and <em>offline</em> layers. Detailed information regarding each pipeline component may be found <a href="https://towardsdatascience.com/architecting-a-machine-learning-pipeline-a847f094d1c7">here</a>.</p>
+
+<table>
+<thead>
+<tr>
+<th align="center"><img src="../images/ml-end-to-end.jpeg" alt="input" /></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center"><em>Figure 2: Machine Learning End-To-End illustrated by Semi Koen in <a href="https://towardsdatascience.com/architecting-a-machine-learning-pipeline-a847f094d1c7">Architecting a Machine Learning Pipeline</a> blog post.</em></td>
+</tr>
+
+<tr>
+<td align="center">_</td>
+</tr>
+</tbody>
+</table>
+
+<p>Observing the figure above, we observe that the <em>Model Scoring</em> (also known as Model Serving) is the most complex stage for the Machine Learning Engineers. This phase implies that the model was previously deployed and embedded in a decision-making framework. The deployment is challenging as, traditionally, the programming languages needed to operationalise models are different from those used to develop them. One solution is to deploy the model to a <a href="https://www.docker.com/resources/what-container">container</a> and run as a <a href="https://microservices.io/">Microservice</a>. This operation often requires <a href="https://en.wikipedia.org/wiki/Continuous_delivery">continuous delivery</a> implementation, forcing the new <a href="https://dataskeptic.com/blog/episodes/2019/ml-ops">MLOps</a> role.</p>
+
+<p>Finally, according to Semi Koen, the main objectives of building Machine Learning systems are:</p>
+
+<ul>
+<li>Reduce latency;</li>
+<li>Integrated but loosely coupled with the other parts of the system, e.g. data stores, reporting, graphical user interface;</li>
+<li>Can scale both horizontally and vertically;</li>
+<li>Are message driven i.e. the system communicates via asynchronous, non-blocking message passing;</li>
+<li>Provide efficient computation with regards to workload management;</li>
+<li>Are fault-tolerant and self healing i.e. breakdown management;</li>
+<li>Support batch and real-time processing.</li>
+</ul>
+
+<p>Challenging!</p>
+
+<h3 id="abstract-the-pipeline">Abstract the Pipeline</h3>
+
+<p>Fortunately, nowadays, there are several platforms to facilitate the Machine Learning Productization, helping Data Scientist to create these pipelines fast and efficiently. Some examples of these platforms are MLflow, Metaflow and Azure ML Studio (check <a href="###Platforms">Platforms Bibliography</a> for links).</p>
+
+<p>Ultimately, an example of an end-to-end Machine Learning project is described in <a href="https://towardsdatascience.com/a-true-end-to-end-ml-example-lead-scoring-f5b52e9a3c80">this blogpost</a>. In this case, they use MLflow to keep track of the model version and AWS Sagemaker to deploy the model.</p>
+
+<h3 id="final-remarks">Final Remarks</h3>
+
+<p>This blog post is very naïve, but the goal is to situate the Researcher on the pipeline and show that productize Machine Leaning is not that easy, yet there are platforms welling to help and ease our eager to make an impact!</p>
+
+<h2 id="bibliography">Bibliography</h2>
+
+<p><a href="https://towardsdatascience.com/being-a-data-scientist-does-not-make-you-a-software-engineer-c64081526372">How to build scalable Machine Learning systems - Part 1</a> and <a href="https://towardsdatascience.com/architecting-a-machine-learning-pipeline-a847f094d1c7">Architecting a Machine Learning Pipeline</a> series of blogposts.</p>
+
+<p><a href="https://towardsdatascience.com/a-true-end-to-end-ml-example-lead-scoring-f5b52e9a3c80">A True End-to-end ML Example: Lead Scoring</a> blogpost with an implementation of an end-to-end Machine Learning project example.</p>
+
+<p>Data Skeptic Podcast: <a href="https://dataskeptic.com/blog/episodes/2019/ml-ops">MLOps</a>.</p>
+
+<h3 id="machine-learning-engineers">Machine Learning Engineers</h3>
+
+<p>Linear Digressions Podcast: <a href="http://lineardigressions.com/episodes/2019/3/3/are-machine-learning-engineers-the-new-data-scientists">Are machine learning engineers the new data scientists?</a>.</p>
+
+<p><a href="https://medium.com/@tomaszdudek/but-what-is-this-machine-learning-engineer-actually-doing-18464d5c699">But what is this &ldquo;machine learning engineer&rdquo; actually doing?</a> blogpost.</p>
+
+<h3 id="platforms">Platforms</h3>
+
+<p><a href="https://mlflow.org/">MLFlow</a>, <a href="https://metaflow.org/">Metaflow</a> and <a href="https://studio.azureml.net/">Azure ML studio</a> are powerful platforms to manage the ML lifecycle.</p>
+
+  </section>
+  
+  <div class="clearfix">
+    
+      <div class="post-date pull-left">
+        <span class="small">
+          Posted on
+          Mar 28, 2020 at 23:20
+        </span>
+    </div>
+    
+    <div class="pull-right">
+      
+        
+          <span class="post-tag small"><a href="/tags/engineering/">#Engineering</a></span>
+        
+      
+    </div>
+  </div>
+  <footer>
+    
+      
+        <div class="delimiter"></div>
+        <section class="author-info row">
+          <div class="author-avatar col-md-2">
+            
+          </div>
+          <div class="author-meta col-md-10">
+            
+              <h3 class="author-name text-primary">Inês Gomes</h3>
+            
+            
+              <div class="author-bio">Portuguese Data Scientist exploring this brave new world of Data!</div>
+            
+            
+              <a class="btn btn-primary author-contact" href="mailto:gomes.inesisabel@gmail.com">
+                <div>
+                  <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                  &nbsp;Contact me
+                </div>
+              </a>
+            
+          </div>
+        </section>
+      
+	
+    
+    <div class="delimiter"></div>
+    <div class="pager-container">
+      
+        <a class="btn btn-primary btn-older-posts disabled" href="#">
+          <div>
+            <span aria-hidden="true">&larr;</span> Older Posts
+          </div>
+        </a>
+      
+      
+        <a class="btn btn-primary btn-newer-posts" href="/posts/bert/">
+          <div>
+            Newer Posts <span aria-hidden="true">&rarr;</span>
+          </div>
+        </a>
+      
+    </div>
+    
+  </footer>
+</article>
+<div class="delimiter"></div>
+
+  </main>
+  <footer class="container global-footer">
+    <div class="copyright-note pull-left">
+      
+    </div>
+    <div class="sns-links hidden-print">
+  
+    <a href="mailto:gomes.inesisabel@gmail.com">
+      <i class="fa fa-envelope"></i>
+    </a>
+  
+  
+  
+  
+  
+  
+    <a href="https://github.com/inesgomes" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+  
+  
+  
+  
+  
+  
+    <a href="https://linkedin.com/in/inesgomes778" target="_blank">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  
+  
+  <a href="https://www.kaggle.com/inesgomes" target="_blank">
+    <i class="fab fa-kaggle"></i>
+  </a>
+  
+  
+</div>
+
+  </footer>
+
+  
+  
+  
+
+  
+  
+
+  
+</body>
+</html>
+

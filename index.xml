@@ -6,15 +6,24 @@
     <description>Recent content on Data Science Wiki</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 23 Nov 2019 15:38:27 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 28 Mar 2020 23:20:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Machine Learning End-to-end</title>
+      <link>/posts/ml-end-to-end/</link>
+      <pubDate>Sat, 28 Mar 2020 23:20:00 +0000</pubDate>
+      
+      <guid>/posts/ml-end-to-end/</guid>
+      <description>Being a data scientist is not only creating models but also understanding the Machine Learning pipeline. How can we productize Machine Learning? What is the infrastructure behind it?</description>
+    </item>
+    
+    <item>
       <title>BERT: Bidirectional Encoder Representations from Transformers</title>
       <link>/posts/bert/</link>
-      <pubDate>Sat, 23 Nov 2019 15:38:27 +0200</pubDate>
+      <pubDate>Sat, 23 Nov 2019 15:38:00 +0000</pubDate>
       
       <guid>/posts/bert/</guid>
       <description>BERT is a pre-training language model for NLP developed by Google. It has caused excitement in the ML field given its state-of-the-art results.</description>
