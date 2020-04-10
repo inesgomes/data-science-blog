@@ -132,7 +132,7 @@
   <section>
     
 
-<p>Data Science is a field of study that has been developing at a fast pace in the last years as a result of considerable research in the Machine Learning area, but also by the impact that it has been causing in our society. With this in mind, companies are investing in AI creating research teams to innovate their products. Nevertheless, the produced models must be productized to deliver real-time predictions and create business impact. With this intention, Software Engineers with Machine Learning skills are needed to architect and build Machine Learning pipelines that allow real-time predictions. These individuals that usually have Computer Science background allied with AI, Maths and Statistics are the <strong>Machine Learning Engineers</strong>. Data Scientists (that ideally also have Engineering skills) must work with ML Engineers to define the pipeline and productize their research. In this blog post, I&rsquo;m sharing some content related to the role of and ML engineer in a company (see <a href="##Bibliography">Bibliography</a>) and I&rsquo;m detailing on how to productize Machine Learning (because this is the skill that the Data Scientists need to acquire 😉).</p>
+<p>Data Science is a field of study that has been developing at a fast pace in the last years as a result of considerable research in the Machine Learning area, but also by the impact that it has been causing in our society. With this in mind, companies are investing in AI creating research teams to innovate their products. Nevertheless, the produced models must be productized to deliver real-time predictions and create business impact. With this intention, Software Engineers with Machine Learning skills are needed to architect and build Machine Learning pipelines that allow real-time predictions. These individuals that usually have Computer Science background allied with AI, Maths and Statistics are the <strong>Machine Learning Engineers</strong>. Data Scientists (that ideally also have Engineering skills) must work with ML Engineers to define the pipeline and productize their research. In this blog post, I&rsquo;m sharing some content related to the role of and ML engineer in a company (see [<a href="##Bibliography">4</a>] and [<a href="##Bibliography">5</a>]) and I&rsquo;m detailing on how to productize Machine Learning (because this is the skill that the Data Scientists need to acquire 😉).</p>
 
 <h3 id="machine-learning-lifecycle">Machine Learning Lifecycle</h3>
 
@@ -152,7 +152,7 @@
 
 <tbody>
 <tr>
-<td align="center"><em>Figure 1: Machine Learning Pipeline illustrated by Semi Koen in <a href="https://towardsdatascience.com/architecting-a-machine-learning-pipeline-a847f094d1c7">Architecting a Machine Learning Pipeline</a> blog post.</em></td>
+<td align="center"><em>Figure 1: Machine Learning Pipeline illustrated by Semi Koen in [<a href="##Bibliography">1</a>].</em></td>
 </tr>
 
 <tr>
@@ -161,7 +161,7 @@
 </tbody>
 </table>
 
-<p>Figure 2 shows a more detailed pipeline that includes both the <em>online</em> and <em>offline</em> layers. Detailed information regarding each pipeline component may be found <a href="https://towardsdatascience.com/architecting-a-machine-learning-pipeline-a847f094d1c7">here</a>.</p>
+<p>Figure 2 shows a more detailed pipeline that includes both the <em>online</em> and <em>offline</em> layers. Detailed information regarding each pipeline component may be found in [<a href="##Bibliography">1</a>].</p>
 
 <table>
 <thead>
@@ -172,7 +172,7 @@
 
 <tbody>
 <tr>
-<td align="center"><em>Figure 2: Machine Learning End-To-End illustrated by Semi Koen in <a href="https://towardsdatascience.com/architecting-a-machine-learning-pipeline-a847f094d1c7">Architecting a Machine Learning Pipeline</a> blog post.</em></td>
+<td align="center"><em>Figure 2: Machine Learning End-To-End illustrated by Semi Koen in [<a href="##Bibliography">1</a>].</em></td>
 </tr>
 
 <tr>
@@ -181,7 +181,7 @@
 </tbody>
 </table>
 
-<p>Observing the figure above, we observe that the <em>Model Scoring</em> (also known as Model Serving) is the most complex stage for the Machine Learning Engineers. This phase implies that the model was previously deployed and embedded in a decision-making framework. The deployment is challenging as, traditionally, the programming languages needed to operationalise models are different from those used to develop them. One solution is to deploy the model to a <a href="https://www.docker.com/resources/what-container">container</a> and run as a <a href="https://microservices.io/">Microservice</a>. This operation often requires <a href="https://en.wikipedia.org/wiki/Continuous_delivery">continuous delivery</a> implementation, forcing the new <a href="https://dataskeptic.com/blog/episodes/2019/ml-ops">MLOps</a> role.</p>
+<p>Observing the figure above, we observe that the <em>Model Scoring</em> (also known as Model Serving) is the most complex stage for the Machine Learning Engineers. This phase implies that the model was previously deployed and embedded in a decision-making framework. The deployment is challenging as, traditionally, the programming languages needed to operationalise models are different from those used to develop them. One solution is to deploy the model to a <a href="https://www.docker.com/resources/what-container">container</a> and run as a <a href="https://microservices.io/">Microservice</a>. This operation often requires <a href="https://en.wikipedia.org/wiki/Continuous_delivery">continuous delivery</a> implementation, forcing the new MLOps role [<a href="Bibliography]">3</a>].</p>
 
 <p>Finally, according to Semi Koen, the main objectives of building Machine Learning systems are:</p>
 
@@ -199,9 +199,9 @@
 
 <h3 id="abstract-the-pipeline">Abstract the Pipeline</h3>
 
-<p>Fortunately, nowadays, there are several platforms to facilitate the Machine Learning Productization, helping Data Scientist to create these pipelines fast and efficiently. Some examples of these platforms are MLflow, Metaflow and Azure ML Studio (check <a href="###Platforms">Platforms Bibliography</a> for links).</p>
+<p>Fortunately, nowadays, there are several platforms to facilitate the Machine Learning Productization, helping Data Scientist to create these pipelines fast and efficiently. Some examples of these platforms are MLflow, Metaflow and Azure ML Studio (check <a href="###extra-resources">Extra Resources</a> for links).</p>
 
-<p>Ultimately, an example of an end-to-end Machine Learning project is described in <a href="https://towardsdatascience.com/a-true-end-to-end-ml-example-lead-scoring-f5b52e9a3c80">this blogpost</a>. In this case, they use MLflow to keep track of the model version and AWS Sagemaker to deploy the model.</p>
+<p>Ultimately, an example of an end-to-end Machine Learning project is described in [<a href="##Bibliography">2</a>]. In this case, they use MLflow to keep track of the model version and AWS Sagemaker to deploy the model.</p>
 
 <h3 id="final-remarks">Final Remarks</h3>
 
@@ -209,21 +209,28 @@
 
 <h2 id="bibliography">Bibliography</h2>
 
-<p><a href="https://towardsdatascience.com/being-a-data-scientist-does-not-make-you-a-software-engineer-c64081526372">How to build scalable Machine Learning systems - Part 1</a> and <a href="https://towardsdatascience.com/architecting-a-machine-learning-pipeline-a847f094d1c7">Architecting a Machine Learning Pipeline</a> series of blogposts.</p>
+<p><em>[1] Koen, Semi. “Architecting a Machine Learning Pipeline.” Medium. Towards Data Science, August 9, 2019. <a href="https://towardsdatascience.com/architecting-a-machine-learning-pipeline-a847f094d1c7">https://towardsdatascience.com/architecting-a-machine-learning-pipeline-a847f094d1c7</a>.</em></p>
 
-<p><a href="https://towardsdatascience.com/a-true-end-to-end-ml-example-lead-scoring-f5b52e9a3c80">A True End-to-end ML Example: Lead Scoring</a> blogpost with an implementation of an end-to-end Machine Learning project example.</p>
+<p><em>[2] Barnhard, Adam. “A True End-to-End ML Example: Lead Scoring.” Medium. Towards Data Science, March 20, 2020. <a href="https://towardsdatascience.com/a-true-end-to-end-ml-example-lead-scoring-f5b52e9a3c80">https://towardsdatascience.com/a-true-end-to-end-ml-example-lead-scoring-f5b52e9a3c80</a>.</em></p>
 
-<p>Data Skeptic Podcast: <a href="https://dataskeptic.com/blog/episodes/2019/ml-ops">MLOps</a>.</p>
+<p><em>[3] “ML Ops.” Data Skeptic, November 27, 2019. <a href="https://dataskeptic.com/blog/episodes/2019/ml-ops">https://dataskeptic.com/blog/episodes/2019/ml-ops</a>.</em></p>
 
-<h3 id="machine-learning-engineers">Machine Learning Engineers</h3>
+<p><em>[4] Malone, Katie. “Are Machine Learning Engineers the New Data Scientists?” Linear Digressions. Linear Digressions, March 4, 2019. <a href="http://lineardigressions.com/episodes/2019/3/3/are-machine-learning-engineers-the-new-data-scientists">http://lineardigressions.com/episodes/2019/3/3/are-machine-learning-engineers-the-new-data-scientists</a>.</em></p>
 
-<p>Linear Digressions Podcast: <a href="http://lineardigressions.com/episodes/2019/3/3/are-machine-learning-engineers-the-new-data-scientists">Are machine learning engineers the new data scientists?</a>.</p>
+<p><em>[5] Dudek, Tomasz. “But What Is This ‘Machine Learning Engineer’ Actually Doing?” Medium. Medium, May 27, 2018. <a href="https://medium.com/@tomaszdudek/but-what-is-this-machine-learning-engineer-actually-doing-18464d5c699">https://medium.com/@tomaszdudek/but-what-is-this-machine-learning-engineer-actually-doing-18464d5c699</a>.</em></p>
 
-<p><a href="https://medium.com/@tomaszdudek/but-what-is-this-machine-learning-engineer-actually-doing-18464d5c699">But what is this &ldquo;machine learning engineer&rdquo; actually doing?</a> blogpost.</p>
+<h2 id="extra-resources">Extra Resources</h2>
 
-<h3 id="platforms">Platforms</h3>
+<ul>
+<li>Some powerful platforms to manage the ML lifecycle:
 
-<p><a href="https://mlflow.org/">MLFlow</a>, <a href="https://metaflow.org/">Metaflow</a> and <a href="https://studio.azureml.net/">Azure ML studio</a> are powerful platforms to manage the ML lifecycle.</p>
+<ul>
+<li><a href="https://mlflow.org/">MLFlow</a></li>
+<li><a href="https://metaflow.org/">Metaflow</a></li>
+<li><a href="https://studio.azureml.net/">Azure ML studio</a></li>
+</ul></li>
+<li>First part of <em>Architecting a Machine Learning Pipeline</em> series of blogposts: <a href="https://towardsdatascience.com/being-a-data-scientist-does-not-make-you-a-software-engineer-c64081526372">How to build scalable Machine Learning systems - Part 1</a>.</li>
+</ul>
 
   </section>
   

@@ -132,8 +132,6 @@
   <section>
     
 
-<h3 id="introduction">Introduction</h3>
-
 <p>With so much hype around BERT, it was time to study it a little bit deeper. BERT is a pre-trained language model for Natural Language Processing (NLP) developed by Google AI Language researchers. A pre-trained language model is a model that was previously trained in a huge corpus and can capture several components of a language such as long-term dependencies, hierarchical relations, or sentiment. These models are effective for improving many NLP tasks. Examples include Question Answering (Q&amp;A), Natural Language Inference (NLI) or Named Entity Recognition (NER).</p>
 
 <h3 id="background">Background</h3>
@@ -153,7 +151,7 @@
 
 <tbody>
 <tr>
-<td align="center"><em>Figure 1: BERT input example</em></td>
+<td align="center"><em>Figure 1: BERT input example [<a href="##Bibliography">1</a>]</em></td>
 </tr>
 
 <tr>
@@ -162,7 +160,7 @@
 </tbody>
 </table>
 
-<p>Regarding the BERT pre-training, the authors start by defining a prediction goal. When using unidirectional self-attention models, it is possible to simply predict the next word in a sequence, but in a bidirectional approach, it would allow each word to &ldquo;see itself&rdquo;. Therefore, BERT uses two methods to pre-train the model: <em>Masked LM</em> and <em>Next Sentence Prediction</em>. Masked LM (MLM) method masks some percentage (in this case 15%) of the input tokens randomly. The final hidden vectors corresponding to the mask tokens are fed into an output SoftMax, to predict the masked words based on the context provided by the non-masked words in the sequence. This method drawback is the creation of a mismatch between pre-training and fine-tuning (since the masked token does not appear during fine-tuning). For further details see the <a href="https://arxiv.org/pdf/1810.04805.pdf">original paper</a>. On the other hand, in the <em>Next Sentence Prediction</em> BERT improves the understanding of the relationship between two sentences, predicting if the second sentence in the pair is the next in the original document. To achieve it, during training 50% of the time, the next sentence is the subsequent sentence and the other half is a random sentence from the document. Finally, when training the BERT model, Masked LM and Next Sentence Prediction are trained together, to minimize the combined loss function of the two strategies.</p>
+<p>Regarding the BERT pre-training, the authors start by defining a prediction goal. When using unidirectional self-attention models, it is possible to simply predict the next word in a sequence, but in a bidirectional approach, it would allow each word to &ldquo;see itself&rdquo;. Therefore, BERT uses two methods to pre-train the model: <em>Masked LM</em> and <em>Next Sentence Prediction</em>. Masked LM (MLM) method masks some percentage (in this case 15%) of the input tokens randomly. The final hidden vectors corresponding to the mask tokens are fed into an output SoftMax, to predict the masked words based on the context provided by the non-masked words in the sequence. This method drawback is the creation of a mismatch between pre-training and fine-tuning (since the masked token does not appear during fine-tuning). For further details see the [<a href="##Bibliography">1</a>]. On the other hand, in the <em>Next Sentence Prediction</em> BERT improves the understanding of the relationship between two sentences, predicting if the second sentence in the pair is the next in the original document. To achieve it, during training 50% of the time, the next sentence is the subsequent sentence and the other half is a random sentence from the document. Finally, when training the BERT model, Masked LM and Next Sentence Prediction are trained together, to minimize the combined loss function of the two strategies.</p>
 
 <p>After pre-training BERT, the fine-tuning step occurs when training the model to specific tasks (our project). For each task, we simply plug in the task-specific inputs and outputs into BERT and fine-tune all the parameters end-to-end. In this case, we may add new classification layers.</p>
 
@@ -179,11 +177,22 @@
 
 <h2 id="bibliography">Bibliography</h2>
 
-<p><a href="https://arxiv.org/pdf/1810.04805.pdf">Original Paper</a> and <a href="https://github.com/google-research/bert">GitHub code</a>.</p>
+<p><em>[1] Devlin, Jacob, Ming-Wei Chang, Kenton Lee and Kristina Toutanova. “BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.” NAACL-HLT (2019). <a href="https://arxiv.org/pdf/1810.04805.pdf">https://arxiv.org/pdf/1810.04805.pdf</a></em></p>
 
-<p>Data Skeptic Podcast series: <a href="https://dataskeptic.com/blog/episodes/2019/bert">BERT</a>, <a href="https://dataskeptic.com/blog/episodes/2019/bert-is-magic">BERT is magic</a> and <a href="https://dataskeptic.com/blog/episodes/2019/bert-is-shallow">BERT is shallow</a>.</p>
+<p><em>[2] Horev, Rani. “BERT Explained: State of the Art Language Model for NLP.” Medium. Towards Data Science, November 17, 2018. <a href="https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270">https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270</a>.</em></p>
 
-<p><a href="https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270">BERT Explained: State of the art language model for NLP</a> blogpost.</p>
+<h2 id="extra-resources">Extra Resources</h2>
+
+<ul>
+<li>Bert <a href="https://github.com/google-research/bert">GitHub code</a>;</li>
+<li>Data Skeptic Podcast series:
+
+<ul>
+<li><a href="https://dataskeptic.com/blog/episodes/2019/bert">BERT</a>;</li>
+<li><a href="https://dataskeptic.com/blog/episodes/2019/bert-is-magic">BERT is magic</a>;</li>
+<li><a href="https://dataskeptic.com/blog/episodes/2019/bert-is-shallow">BERT is shallow</a>.</li>
+</ul></li>
+</ul>
 
 <h2 id="similar-topics">Similar Topics</h2>
 
@@ -192,7 +201,7 @@
 <li><a href="https://arxiv.org/abs/1812.10860">ELMo</a></li>
 <li>GLUE</li>
 <li>Word embeddings</li>
-<li><a href="https://ai.googleblog.com/2020/03/more-efficient-nlp-model-pre-training.html">ELECTRA</a></li>
+<li><strong>NEW!</strong> <a href="https://ai.googleblog.com/2020/03/more-efficient-nlp-model-pre-training.html">ELECTRA</a></li>
 </ul>
 
   </section>

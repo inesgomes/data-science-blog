@@ -26,7 +26,7 @@
       <pubDate>Sat, 23 Nov 2019 15:38:00 +0000</pubDate>
       
       <guid>/posts/bert/</guid>
-      <description>BERT is a pre-training language model for NLP developed by Google. It has caused excitement in the ML field given its state-of-the-art results.</description>
+      <description>BERT is a pre-training language model for NLP developed by Google that has caused excitement in the ML field given its state-of-the-art results.</description>
     </item>
     
     <item>
@@ -57,7 +57,8 @@ Academic Background: BSc./MSc. in Informatics and Computing Engineering</descrip
       
       <guid>/pages/glossary/</guid>
       <description>Glossary with several platforms, tools, models and benchmarks. Just to be aware of the newest trends.
-A Airflow (Apache): platform created by community to programmatically author, schedule and monitor workflows. Is scalable, dynamic, extensible and elegant.
+A [Active Learning](): TODO
+Airflow (Apache): platform created by community to programmatically author, schedule and monitor workflows. Is scalable, dynamic, extensible and elegant.
 AutoML (Google): train high-quality custom machine learning models with minimal effort and machine learning expertise.
 B Batch Jobs: jobs that can run without end user interaction, or can be scheduled to run as resources permit.</description>
     </item>
