@@ -3,6 +3,12 @@ main {
     word-wrap: break-word;
 }
 
+.bibliography{
+    font-size: 15px;
+    padding-left: 3%;
+}
+
+
 /* Header */
 
 .global-header {

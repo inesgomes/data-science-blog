@@ -38,8 +38,7 @@ Academic Background: BSc./MSc. in Informatics and Computing Engineering</descrip
       
       <guid>/pages/glossary/</guid>
       <description>Glossary with several platforms, tools, models and benchmarks. Just to be aware of the newest trends.
-A [Active Learning](): TODO
-Airflow (Apache): platform created by community to programmatically author, schedule and monitor workflows. Is scalable, dynamic, extensible and elegant.
+A Airflow (Apache): platform created by community to programmatically author, schedule and monitor workflows. Is scalable, dynamic, extensible and elegant.
 AutoML (Google): train high-quality custom machine learning models with minimal effort and machine learning expertise.
 B Batch Jobs: jobs that can run without end user interaction, or can be scheduled to run as resources permit.</description>
     </item>
