@@ -61,10 +61,6 @@
             About
           </a>
         
-          <a class="btn btn-default navbar-item" href="/tags">
-            Blog Posts
-          </a>
-        
           <a class="btn btn-default navbar-item" href="/pages/glossary">
             Glossary
           </a>
@@ -129,12 +125,29 @@
     <h2 class="text-primary">Machine Learning End-to-end</h2>
   </header>
   <div class="delimiter"></div>
+   
+<aside>
+    <h3>Table of Contents:</h3>
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#machine-learning-lifecycle">Machine Learning Lifecycle</a></li>
+<li><a href="#abstract-the-pipeline">Abstract the Pipeline</a></li>
+<li><a href="#final-remarks">Final Remarks</a>
+<ul>
+<li><a href="#extra-resources">Extra Resources</a></li>
+</ul></li>
+<li><a href="#bibliography">Bibliography</a></li>
+</ul>
+</nav>
+</aside>
+
+  <div class="delimiter"></div>
   <section>
     
 
 <p>Data Science is a field of study that has been developing at a fast pace in the last years as a result of considerable research in the Machine Learning area, but also by the impact that it has been causing in our society. With this in mind, companies are investing in AI creating research teams to innovate their products. Nevertheless, the produced models must be productized to deliver real-time predictions and create business impact. With this intention, Software Engineers with Machine Learning skills are needed to architect and build Machine Learning pipelines that allow real-time predictions. These individuals that usually have Computer Science background allied with AI, Maths and Statistics are the <strong>Machine Learning Engineers</strong>. Data Scientists (that ideally also have Engineering skills) must work with ML Engineers to define the pipeline and productize their research. In this blog post, I&rsquo;m sharing some content related to the role of and ML engineer in a company (see [<a href="##Bibliography">4</a>] and [<a href="##Bibliography">5</a>]) and I&rsquo;m detailing on how to productize Machine Learning (because this is the skill that the Data Scientists need to acquire 😉).</p>
 
-<h3 id="machine-learning-lifecycle">Machine Learning Lifecycle</h3>
+<h1 id="machine-learning-lifecycle">Machine Learning Lifecycle</h1>
 
 <p>Figure 1 shows an example of an ML pipeline. While most Data Scientists are familiarized with the steps <em>one</em> to <em>six</em>, the last two may be challenging for the most part. However, while for the most times Researchers may be working <em>offline</em> (i.e., on their notebooks with previously collected data), in order to productize their models, Machine Learning engineers must architect this pipeline to feed the models with real-time data. This leads us to the definition of two important components:</p>
 
@@ -143,41 +156,21 @@
 <li><em>Offline Data Discovery</em>: analysis on historical data to create the ML model in a batch-processing mode.</li>
 </ul>
 
-<table>
-<thead>
-<tr>
-<th align="center"><img src="../images/ml_pipeline.png" alt="input" /></th>
-</tr>
-</thead>
+<p><center>
+<img src="../images/ml_pipeline.png" alt="drawing" width="600"/></p>
 
-<tbody>
-<tr>
-<td align="center"><em>Figure 1: Machine Learning Pipeline illustrated by Semi Koen in [<a href="##Bibliography">1</a>].</em></td>
-</tr>
-</tbody>
-</table>
-
-<p><br></p>
+<p><em>Figure 1: Machine Learning Pipeline illustrated by Semi Koen in [<a href="#Bibliography">1</a>].</em>
+</center></p>
 
 <p>Figure 2 shows a more detailed pipeline that includes both the <em>online</em> and <em>offline</em> layers. Detailed information regarding each pipeline component may be found in [<a href="##Bibliography">1</a>].</p>
 
-<table>
-<thead>
-<tr>
-<th align="center"><img src="../images/ml-end-to-end.jpeg" alt="input" /></th>
-</tr>
-</thead>
+<p><center>
+<img src="../images/ml-end-to-end.jpeg" alt="drawing" width="1000"/></p>
 
-<tbody>
-<tr>
-<td align="center"><em>Figure 2: Machine Learning End-To-End illustrated by Semi Koen in [<a href="##Bibliography">1</a>].</em></td>
-</tr>
-</tbody>
-</table>
+<p><em>Figure 2: Machine Learning End-To-End illustrated by Semi Koen in [<a href="#Bibliography">1</a>].</em>
+</center></p>
 
-<p><br></p>
-
-<p>Observing the figure above, we observe that the <em>Model Scoring</em> (also known as Model Serving) is the most complex stage for the Machine Learning Engineers. This phase implies that the model was previously deployed and embedded in a decision-making framework. The deployment is challenging as, traditionally, the programming languages needed to operationalise models are different from those used to develop them. One solution is to deploy the model to a <a href="https://www.docker.com/resources/what-container">container</a> and run as a <a href="https://microservices.io/">Microservice</a>. This operation often requires <a href="https://en.wikipedia.org/wiki/Continuous_delivery">continuous delivery</a> implementation, forcing the new MLOps role [<a href="Bibliography]">3</a>].</p>
+<p>Observing the figure above, we observe that the <em>Model Scoring</em> (also known as Model Serving) is the most complex stage for the Machine Learning Engineers. This phase implies that the model was previously deployed and embedded in a decision-making framework. The deployment is challenging as, traditionally, the programming languages needed to operationalise models are different from those used to develop them. One solution is to deploy the model to a <a href="https://www.docker.com/resources/what-container">container</a> and run as a <a href="https://microservices.io/">Microservice</a>. This operation often requires <a href="https://en.wikipedia.org/wiki/Continuous_delivery">continuous delivery</a> implementation, forcing the new MLOps role [<a href="#Bibliography]">3</a>].</p>
 
 <p>Finally, according to Semi Koen, the main objectives of building Machine Learning systems are:</p>
 
@@ -193,17 +186,15 @@
 
 <p>Challenging!</p>
 
-<h3 id="abstract-the-pipeline">Abstract the Pipeline</h3>
+<h1 id="abstract-the-pipeline">Abstract the Pipeline</h1>
 
-<p>Fortunately, nowadays, there are several platforms to facilitate the Machine Learning Productization, helping Data Scientist to create these pipelines fast and efficiently. Some examples of these platforms are MLflow, Metaflow and Azure ML Studio (check <a href="###extra-resources">Extra Resources</a> for links).</p>
+<p>Fortunately, nowadays, there are several platforms to facilitate the Machine Learning Productization, helping Data Scientist to create these pipelines fast and efficiently. Some examples of these platforms are MLflow, Metaflow and Azure ML Studio (check <a href="##extra-resources">Extra Resources</a> for links).</p>
 
-<p>Ultimately, an example of an end-to-end Machine Learning project is described in [<a href="##Bibliography">2</a>]. In this case, they use MLflow to keep track of the model version and AWS Sagemaker to deploy the model.</p>
+<p>Ultimately, an example of an end-to-end Machine Learning project is described in [<a href="#Bibliography">2</a>]. In this case, they use MLflow to keep track of the model version and AWS Sagemaker to deploy the model.</p>
 
-<h3 id="final-remarks">Final Remarks</h3>
+<h1 id="final-remarks">Final Remarks</h1>
 
 <p>This blog post is very naïve, but the goal is to situate the Researcher on the pipeline and show that productize Machine Leaning is not that easy, yet there are platforms welling to help and ease our eager to make an impact!</p>
-
-<div class='delimiter'></div>
 
 <h2 id="extra-resources">Extra Resources</h2>
 
@@ -212,7 +203,9 @@
 <li>First part of <em>Architecting a Machine Learning Pipeline</em> series of blogposts: <a href="https://towardsdatascience.com/being-a-data-scientist-does-not-make-you-a-software-engineer-c64081526372">How to build scalable Machine Learning systems - Part 1</a>.</li>
 </ul>
 
-<h2 id="bibliography">Bibliography</h2>
+<div class='delimiter'></div>
+
+<h1 id="bibliography">Bibliography</h1>
 
 <p><div class='bibliography'>
     [1] Koen, Semi. “Architecting a Machine Learning Pipeline.” Medium. Towards Data Science, August 9, 2019. <a href="https://towardsdatascience.com/architecting-a-machine-learning-pipeline-a847f094d1c7">https://towardsdatascience.com/architecting-a-machine-learning-pipeline-a847f094d1c7</a>.
