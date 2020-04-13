@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning on Data Science Wiki</title>
+    <link>/tags/machine-learning/</link>
+    <description>Recent content in Machine Learning on Data Science Wiki</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 13 Apr 2020 22:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Transfer Learning - Sneak Peak</title>
+      <link>/posts/transfer-learning/</link>
+      <pubDate>Mon, 13 Apr 2020 22:00:00 +0000</pubDate>
+      
+      <guid>/posts/transfer-learning/</guid>
+      <description>Transfer Learning is a field of Machine Learning that study how to gain knowledge from data and generalize to new related domains. Since the theme is so broad, we start by its definition and a shortened explanation on methods and scenarios, focusing on Deep Learning and finishing with an exploration of its advantages and limitations.</description>
+    </item>
+    
+  </channel>
+</rss>

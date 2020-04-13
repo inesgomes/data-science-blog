@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Data Science Wiki</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 28 Mar 2020 23:20:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2020 22:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Transfer Learning - Sneak Peak</title>
+      <link>/posts/transfer-learning/</link>
+      <pubDate>Mon, 13 Apr 2020 22:00:00 +0000</pubDate>
+      
+      <guid>/posts/transfer-learning/</guid>
+      <description>Transfer Learning is a field of Machine Learning that study how to gain knowledge from data and generalize to new related domains. Since the theme is so broad, we start by its definition and a shortened explanation on methods and scenarios, focusing on Deep Learning and finishing with an exploration of its advantages and limitations.</description>
+    </item>
     
     <item>
       <title>Machine Learning End-to-end</title>
