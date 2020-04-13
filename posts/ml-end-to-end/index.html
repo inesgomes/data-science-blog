@@ -139,13 +139,13 @@
 <li><a href="#bibliography">Bibliography</a></li>
 </ul>
 </nav>
+    <div class="delimiter"></div>
 </aside>
 
-  <div class="delimiter"></div>
   <section>
     
 
-<p>Data Science is a field of study that has been developing at a fast pace in the last years as a result of considerable research in the Machine Learning area, but also by the impact that it has been causing in our society. With this in mind, companies are investing in AI creating research teams to innovate their products. Nevertheless, the produced models must be productized to deliver real-time predictions and create business impact. With this intention, Software Engineers with Machine Learning skills are needed to architect and build Machine Learning pipelines that allow real-time predictions. These individuals that usually have Computer Science background allied with AI, Maths and Statistics are the <strong>Machine Learning Engineers</strong>. Data Scientists (that ideally also have Engineering skills) must work with ML Engineers to define the pipeline and productize their research. In this blog post, I&rsquo;m sharing some content related to the role of and ML engineer in a company (see [<a href="##Bibliography">4</a>] and [<a href="##Bibliography">5</a>]) and I&rsquo;m detailing on how to productize Machine Learning (because this is the skill that the Data Scientists need to acquire 😉).</p>
+<p>Data Science is a field of study that has been developing at a fast pace in the last years as a result of considerable research in the Machine Learning area, but also by the impact that it has been causing in our society. With this in mind, companies are investing in AI creating research teams to innovate their products. Nevertheless, the produced models must be productized to deliver real-time predictions and create business impact. With this intention, Software Engineers with Machine Learning skills are needed to architect and build Machine Learning pipelines that allow real-time predictions. These individuals that usually have Computer Science background allied with AI, Maths and Statistics are the <strong>Machine Learning Engineers</strong>. Data Scientists (that ideally also have Engineering skills) must work with ML Engineers to define the pipeline and productize their research. In this blog post, I&rsquo;m sharing some content related to the role of and ML engineer in a company (see [<a href="#bibliography">4</a>] and [<a href="#bibliography">5</a>]) and I&rsquo;m detailing on how to productize Machine Learning (because this is the skill that the Data Scientists need to acquire 😉).</p>
 
 <h1 id="machine-learning-lifecycle">Machine Learning Lifecycle</h1>
 
@@ -159,18 +159,18 @@
 <p><center>
 <img src="../images/ml_pipeline.png" alt="drawing" width="600"/></p>
 
-<p><em>Figure 1: Machine Learning Pipeline illustrated by Semi Koen in [<a href="#Bibliography">1</a>].</em>
+<p><em>Figure 1: Machine Learning Pipeline illustrated by Semi Koen in [<a href="#bibliography">1</a>].</em>
 </center></p>
 
-<p>Figure 2 shows a more detailed pipeline that includes both the <em>online</em> and <em>offline</em> layers. Detailed information regarding each pipeline component may be found in [<a href="##Bibliography">1</a>].</p>
+<p>Figure 2 shows a more detailed pipeline that includes both the <em>online</em> and <em>offline</em> layers. Detailed information regarding each pipeline component may be found in [<a href="#bibliography">1</a>].</p>
 
 <p><center>
 <img src="../images/ml-end-to-end.jpeg" alt="drawing" width="1000"/></p>
 
-<p><em>Figure 2: Machine Learning End-To-End illustrated by Semi Koen in [<a href="#Bibliography">1</a>].</em>
+<p><em>Figure 2: Machine Learning End-To-End illustrated by Semi Koen in [<a href="#bibliography">1</a>].</em>
 </center></p>
 
-<p>Observing the figure above, we observe that the <em>Model Scoring</em> (also known as Model Serving) is the most complex stage for the Machine Learning Engineers. This phase implies that the model was previously deployed and embedded in a decision-making framework. The deployment is challenging as, traditionally, the programming languages needed to operationalise models are different from those used to develop them. One solution is to deploy the model to a <a href="https://www.docker.com/resources/what-container">container</a> and run as a <a href="https://microservices.io/">Microservice</a>. This operation often requires <a href="https://en.wikipedia.org/wiki/Continuous_delivery">continuous delivery</a> implementation, forcing the new MLOps role [<a href="#Bibliography]">3</a>].</p>
+<p>Observing the figure above, we observe that the <em>Model Scoring</em> (also known as Model Serving) is the most complex stage for the Machine Learning Engineers. This phase implies that the model was previously deployed and embedded in a decision-making framework. The deployment is challenging as, traditionally, the programming languages needed to operationalise models are different from those used to develop them. One solution is to deploy the model to a <a href="https://www.docker.com/resources/what-container">container</a> and run as a <a href="https://microservices.io/">Microservice</a>. This operation often requires <a href="https://en.wikipedia.org/wiki/Continuous_delivery">continuous delivery</a> implementation, forcing the new MLOps role [<a href="#bibliography]">3</a>].</p>
 
 <p>Finally, according to Semi Koen, the main objectives of building Machine Learning systems are:</p>
 
@@ -190,7 +190,7 @@
 
 <p>Fortunately, nowadays, there are several platforms to facilitate the Machine Learning Productization, helping Data Scientist to create these pipelines fast and efficiently. Some examples of these platforms are MLflow, Metaflow and Azure ML Studio (check <a href="##extra-resources">Extra Resources</a> for links).</p>
 
-<p>Ultimately, an example of an end-to-end Machine Learning project is described in [<a href="#Bibliography">2</a>]. In this case, they use MLflow to keep track of the model version and AWS Sagemaker to deploy the model.</p>
+<p>Ultimately, an example of an end-to-end Machine Learning project is described in [<a href="#bibliography">2</a>]. In this case, they use MLflow to keep track of the model version and AWS Sagemaker to deploy the model.</p>
 
 <h1 id="final-remarks">Final Remarks</h1>
 
@@ -329,6 +329,15 @@
   </footer>
 
   
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'AIzaSyBBSed1vYYekbYLJR78IwyRShIiSpi11ac', 'auto');
+    ga('send', 'pageview');
+  </script>
   
   
 
