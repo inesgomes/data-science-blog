@@ -9,6 +9,19 @@ main {
 }
 
 
+@media (max-width: 767px) {
+    .header-pc {
+        display:none;
+    }
+}
+
+@media (min-width: 767px) {
+    .header-mobile {
+        display:none;
+    }
+}
+
+
 /* Header */
 
 .global-header {
@@ -78,7 +91,6 @@ main {
     display: flex;
     flex-direction: row;
     position: absolute;
-    /* right: 20px; */
     bottom: 20px;
     width: 100%;
     justify-content: center;
@@ -86,6 +98,7 @@ main {
 
 .navbar-item {
     margin-right: 20px;
+    height: 35px;
     position: initial !important;
 }
 

@@ -31,9 +31,15 @@
   
 
   
+
+  <script src="/js/jquery-3.4.1.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+
 </head>
 <body>
   
+  <div class='header-pc'>
+    
   <header class="global-header"  style="background-image:url(/images/bg-dark.png)">
   
     <section class="header-text">
@@ -49,7 +55,6 @@
           &nbsp;Home
         </a>
       
-      
       <div class="navbar-container">
         
           <a class="btn btn-default navbar-item" href="/pages/about">
@@ -63,7 +68,6 @@
           <a class="btn btn-default navbar-item" href="/pages/links">
             Study Repository
           </a>
-        
         
         <div class="sns-links hidden-print">
   
@@ -97,20 +101,37 @@
   
 </div>
 
-      </div>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+      </div>   
     </section>
-  </header>
+</header>
+  </div>
+  <div class='header-mobile'>
+    <nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+      <div class="navbar-header">
+          <button type="button" class="btn btn-primary navbar-toggle" data-toggle="collapse" data-target="#ex" aria-expanded="false" aria-controls="ex">
+              <span class="sr-only">Toggle Navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Data Science Wiki</a>
+      </div>
+      <div class="navbar-collapse collapse" id="ex" hidden="true">
+          <ul class="nav navbar-nav mr-auto">
+              
+              <li><a href="/pages/about">About</a></li>
+              
+              <li><a href="/pages/glossary">Glossary</a></li>
+              
+              <li><a href="/pages/links">Study Repository</a></li>
+              
+          </ul>
+      </div>
+  </div>
+</nav>
+  </div>
+  
   <main class="container">
 
 <section class="taxonomy-terms">
@@ -125,40 +146,9 @@
     <div class="copyright-note pull-left">
       
     </div>
-    <div class="sns-links hidden-print">
-  
-    <a href="mailto:gomes.inesisabel@gmail.com">
-      <i class="fa fa-envelope"></i>
-    </a>
-  
-  
-  
-  
-  
-  
-    <a href="https://github.com/inesgomes" target="_blank">
-      <i class="fab fa-github"></i>
-    </a>
-  
-  
-  
-  
-  
-  
-    <a href="https://linkedin.com/in/inesgomes778" target="_blank">
-      <i class="fab fa-linkedin"></i>
-    </a>
-  
-  
-  <a href="https://www.kaggle.com/inesgomes" target="_blank">
-    <i class="fab fa-kaggle"></i>
-  </a>
-  
-  
-</div>
-
   </footer>
 
+  
   
   
   <script>
