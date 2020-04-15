@@ -21,6 +21,32 @@ main {
     }
 }
 
+/* Contact me*/
+
+.author-info .sns-links a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid /*rgba(1, 255, 255, 0.6);*/;
+    border-radius: 15px;
+    vertical-align: top;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    margin: 10px 2px;
+    opacity: 0.85;
+    /*color: rgba(255, 255, 255, 0.6);*/   
+    /*transition: color,border-color 0.1s linear;*/
+}
+
+.author-info .sns-links a i {
+    vertical-align: middle;
+}
+
+.author-info .sns-links a:hover {
+    opacity: 0.4;
+}
 
 /* Header */
 
