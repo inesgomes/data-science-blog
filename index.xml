@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Transfer Learning - Sneak Peak</title>
+      <title>Transfer Learning - Sneak Peek</title>
       <link>/posts/transfer-learning/</link>
       <pubDate>Mon, 13 Apr 2020 22:00:00 +0000</pubDate>
       
@@ -66,9 +66,8 @@ Academic Background: BSc./MSc. in Informatics and Computing Engineering</descrip
       
       <guid>/pages/glossary/</guid>
       <description>Glossary with several platforms, tools, models and benchmarks. Just to be aware of the newest trends.
-A Airflow (Apache): platform created by community to programmatically author, schedule and monitor workflows. Is scalable, dynamic, extensible and elegant.
-AutoML (Google): train high-quality custom machine learning models with minimal effort and machine learning expertise.
-B Batch Jobs: jobs that can run without end user interaction, or can be scheduled to run as resources permit.</description>
+A Active Learning: process of prioritising the data which needs to be labelled in order to have the highest impact to training a supervised model.
+Airflow (Apache): platform to programmatically author, schedule and monitor workflows as directed acyclic graphs (DAGs) of tasks. The Airflow scheduler executes tasks on an array of workers while following the specified dependencies.</description>
     </item>
     
     <item>
