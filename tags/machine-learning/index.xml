@@ -6,10 +6,19 @@
     <description>Recent content in Machine Learning on Data Science Wiki</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 13 Apr 2020 22:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2020 10:23:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Deep Learning Architectures</title>
+      <link>/posts/deep-architectures/</link>
+      <pubDate>Fri, 29 May 2020 10:23:00 +0000</pubDate>
+      
+      <guid>/posts/deep-architectures/</guid>
+      <description>In this blogpost we explore the most relevant Deep Learning Architectures and their use cases.</description>
+    </item>
     
     <item>
       <title>Transfer Learning - Sneak Peek</title>

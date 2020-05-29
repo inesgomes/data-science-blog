@@ -6,10 +6,19 @@
     <description>Recent content on Data Science Wiki</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 13 Apr 2020 22:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2020 10:23:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Deep Learning Architectures</title>
+      <link>/posts/deep-architectures/</link>
+      <pubDate>Fri, 29 May 2020 10:23:00 +0000</pubDate>
+      
+      <guid>/posts/deep-architectures/</guid>
+      <description>In this blogpost we explore the most relevant Deep Learning Architectures and their use cases.</description>
+    </item>
     
     <item>
       <title>Transfer Learning - Sneak Peek</title>
@@ -67,7 +76,8 @@ Academic Background: BSc./MSc. in Informatics and Computing Engineering</descrip
       <guid>/pages/glossary/</guid>
       <description>Glossary with several platforms, tools, models and benchmarks. Just to be aware of the newest trends.
 A Active Learning: process of prioritising the data which needs to be labelled in order to have the highest impact to training a supervised model.
-Airflow (Apache): platform to programmatically author, schedule and monitor workflows as directed acyclic graphs (DAGs) of tasks. The Airflow scheduler executes tasks on an array of workers while following the specified dependencies.</description>
+AIBench: AI benchmarking suite that proposes ways to do fine-grained analysis of a given AI application.
+Airflow (Apache): platform to programmatically author, schedule and monitor workflows as directed acyclic graphs (DAGs) of tasks.</description>
     </item>
     
     <item>
@@ -78,7 +88,7 @@ Airflow (Apache): platform to programmatically author, schedule and monitor work
       <guid>/pages/links/</guid>
       <description>Internet is a powerful resource to share knowledge. With diverse contributors around the world and distinct channels to disseminate information (e.g., audio, text, video), it is crucial to select the most appropriate ones according to our purpose. So, on this page, I select the most valuable links to knowledge, that I have encountered during my research, study or spare time.
 Blogposts Machine Learning:
- Engineering Uncertainty Estimation in Neural Networks for Time Series Prediction at Uber Scaling Uber’s Customer Support Ticket Assistant (COTA) System with Deep Learning Forecasting COVID-19 Interpretability  NLP:</description>
+ Engineering Uncertainty Estimation in Neural Networks for Time Series Prediction at Uber Scaling Uber’s Customer Support Ticket Assistant (COTA) System with Deep Learning Forecasting COVID-19 Interpretability A state-of-the-art open source chatbot  NLP:</description>
     </item>
     
   </channel>

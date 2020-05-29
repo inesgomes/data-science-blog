@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta property="og:title" content=" Deep Learning Architectures &middot;  Data Science Wiki" />
+  
+    <meta name="theme-color" content="#hexcolor" />
+  
+  <meta property="og:site_name" content="Data Science Wiki" />
+  <meta property="og:url" content="/posts/deep-architectures/" />
+  
+  
+    <meta property="og:type" content="article" />
+    
+    <meta property="og:article:published_time" content="2020-05-29T10:23:00Z" />
+    
+      <meta property="og:article:tag" content="Machine Learning" />
+    
+  
+
+  <title>
+     Deep Learning Architectures &middot;  Data Science Wiki
+  </title>
+
+  <link rel="alternative stylesheet" href="/css/bootstrap.min.css" />
+  
+  <link rel="stylesheet" href="/css/all.css">
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/github.css" />
+  <link rel="stylesheet" href="/css/color-theme.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
+  <link rel="shortcut icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+  
+
+  
+
+  <script src="/js/jquery-3.4.1.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+  
+  <div class='header-pc'>
+    
+  <header class="global-header"  style="background-image:url(/images/bg-dark.png)">
+  
+    <section class="header-text">
+      <h1><a href="/">Data Science Wiki</a></h1>
+      
+        <h4 class="tag-line">
+          <i>&#34;All data has its beauty, but not everyone sees it &#34; - Damian Mingle </i>
+        </h4>
+      
+      
+        <a class="btn btn-default btn-home" href="/">
+          <i class="fa fa-angle-left" aria-hidden="true"></i>
+          &nbsp;Home
+        </a>
+      
+      <div class="navbar-container">
+        
+          <a class="btn btn-default navbar-item" href="/pages/about">
+            About
+          </a>
+        
+          <a class="btn btn-default navbar-item" href="/pages/glossary">
+            Glossary
+          </a>
+        
+          <a class="btn btn-default navbar-item" href="/pages/links">
+            Study Repository
+          </a>
+        
+      </div>   
+    </section>
+</header>
+  </div>
+  <div class='header-mobile'>
+    <nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+      <div class="navbar-header">
+          <button type="button" class="btn btn-primary navbar-toggle" data-toggle="collapse" data-target="#ex" aria-expanded="false" aria-controls="ex">
+              <span class="sr-only">Toggle Navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Data Science Wiki</a>
+      </div>
+      <div class="navbar-collapse collapse" id="ex" hidden="true">
+          <ul class="nav navbar-nav mr-auto">
+              
+              <li><a href="/pages/about">About</a></li>
+              
+              <li><a href="/pages/glossary">Glossary</a></li>
+              
+              <li><a href="/pages/links">Study Repository</a></li>
+              
+          </ul>
+      </div>
+  </div>
+</nav>
+  </div>
+  
+  <main class="container">
+
+
+
+<article>
+  <header class="article-title">
+    <h2 class="text-primary">Deep Learning Architectures</h2>
+  </header>
+  <div class="delimiter"></div>
+   
+<aside>
+    <h3>Table of Contents:</h3>
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#recurrent-neural-networks-rnn">Recurrent Neural Networks (RNN)</a>
+<ul>
+<li><a href="#long-short-term-memory-lstm">Long Short-Term Memory (LSTM)</a></li>
+</ul></li>
+<li><a href="#convolutional-neural-networks-cnn">Convolutional Neural Networks (CNN)</a>
+<ul>
+<li><a href="#lenet-5">LeNet-5</a></li>
+</ul></li>
+<li><a href="#generative-adversarial-networks-gan">Generative Adversarial Networks (GAN)</a></li>
+<li><a href="#other-architectures">Other Architectures</a>
+<ul>
+<li><a href="#extra-resources">Extra Resources</a></li>
+</ul></li>
+<li><a href="#bibliography">Bibliography</a></li>
+</ul>
+</nav>
+    <div class="delimiter"></div>
+</aside>
+
+  <section>
+    
+
+<p>Deep learning is a machine learning method based on Artificial Neural Networks. Figure 1 shows an example of a simple neural network. These nets are usually constituted by <em>neurons</em> (organized by layers), <em>connections and weights</em> and a <em>propagation function</em>. Deep neural networks are known by having multiple hidden layers.</p>
+
+<p><center>
+<img src="../images/nn.png" alt="drawing" width="350"/></p>
+
+<p><em>Figure 1: Classic Neural Network.</em>
+</center></p>
+
+<p>Connectionist deep neural architectures have existed for over 70 years, but when researchers started to investigate different propagation functions, connections, weights and neuron architectures, new <strong>deep learning architectures</strong> have emerged. These architectures, associated with new GPU&rsquo;s advancements and the <em>big data</em> boom, set Deep Learning at the forefront of Artificial Intelligence [<a href="#bibliography">1</a>].</p>
+
+<p>Given the impact that Deep Neural Nets have had and the forecasted impact for the recent future, in this blogpost, we explore the most relevant Deep Learning Architectures and their use cases.</p>
+
+<h1 id="recurrent-neural-networks-rnn">Recurrent Neural Networks (RNN)</h1>
+
+<p>A Recurrent Neural Network (RNN) is one of the foundational network architectures from which other deep learning architectures are built [<a href="#bibliography">1</a>]. These nets are used in domains such as natural language processing, speech synthesis and machine translation.</p>
+
+<p>RNNs process sequences of elements, while retaining a memory of what has come previously in the sequence. Instead of having completely feed-forward connections, RNNs might have connections that feed into prior layers or the same one. Figure 2 shows an example of an RNN architecture.</p>
+
+<p><center>
+<img src="../images/rnn.png" alt="drawing" height="100"/></p>
+
+<p><em>Figure 2: Architecture of an RNN [<a href="#bibliography">1</a>].</em>
+</center></p>
+
+<p>Some examples of frequent RNN are:</p>
+
+<ul>
+<li><a href="https://pdfs.semanticscholar.org/e10f/98b86797ebf6c8caea6f54cacbc5a50e8b34.pdf">LSTM</a></li>
+<li><a href="https://arxiv.org/abs/1406.1078">GRU</a></li>
+</ul>
+
+<p>The RNN main <strong>advantage</strong> is that it shares the same parameters across steps, reducing the number of parameters to learn. On the other end, the main <strong>disadvantages</strong> include being challenging to track long-term dependencies and cannot be stacked into deep models [<a href="#bibliography">4</a>].</p>
+
+<h2 id="long-short-term-memory-lstm">Long Short-Term Memory (LSTM)</h2>
+
+<p>Long Short-Term Memory networks are a specific case of RNNs that includes a memory cell that holds information for long periods, and a set of gates (input, output and forget) to determine when a piece of particular information enters the memory and when it is forgotten (see Figure 3).</p>
+
+<p><center>
+<img src="../images/lstm-cell.png" alt="drawing" width="250" /></p>
+
+<p><em>Figure 3: LSTM memory cell example [<a href="#bibliography">1</a>].</em>
+</center></p>
+
+<h1 id="convolutional-neural-networks-cnn">Convolutional Neural Networks (CNN)</h1>
+
+<p>A Convolutional Neural Network is a multilayer neural network characterized by the main type of <em>layer</em> being a convolution. These networks are mainly used in the Computer Vision field to classify images. The role of CNNs is to reduce the images so that is easier to process, without losing critical features for a good prediction. They can recognize features in early layers (such as edges), and  recombine them into higher-level attributes of the input in the later layers [<a href="#bibliography">1</a>]. Some examples of frequent CNN are:</p>
+
+<ul>
+<li><a href="http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf">LeNet5</a></li>
+<li><a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf">AlexNet</a></li>
+<li><a href="https://arxiv.org/abs/1512.03385">ResNet</a></li>
+</ul>
+
+<h2 id="lenet-5">LeNet-5</h2>
+
+<p>Figure 4 shows the architecture of LeNet-5 for digits recognition with seven layers. Each plane is a feature map, that is a set of neurons that identify the same feature. We also observe that the architecture is divided into two parts: <em>feature extraction</em> that is associated with the convolution and subsampling (or polling in some cases) layers; and <em>classification</em>. The convolutional layer objective is to extract high-level features while the subsampling is responsible for reducing the spatial size (dimension reduction), extracting dominant features which are rotational and positional invariant [<a href="#bibliography">3</a>]. Then, after the second convolutional-subsampling step, the result feeds a fully connected multilayer perceptron that identifIES features of the image! The model is trained with <em>back-propagation</em>.</p>
+
+<p><center>
+<img src="../images/lenet5.png" alt="drawing" /></p>
+
+<p><em>Figure 4: Architecture of LeNet-5 CNN for digits recognition by Yann LeCun [<a href="#bibliography">2</a>].</em>
+</center></p>
+
+<p>The CNN main <strong>advantage</strong> is that once a segment within a particular sector of an image is learned, can recognize that segment present anywhere else in the image. The main <strong>disadvantages</strong> are that CNNs are susceptible to noise and are dependent on the size and quality of the training data [<a href="#bibliography">4</a>].</p>
+
+<h1 id="generative-adversarial-networks-gan">Generative Adversarial Networks (GAN)</h1>
+
+<p>A Generative Adversarial Networks is a deep learning architecture that is composed of two deep learning models that compete with each other. One tries to generate new instances or examples, and its called the <strong>generator</strong>. The other tries to classify if a particular instance originates from the training data or the generator, and it is called the discriminator [<a href="#bibliography">4</a>]. It’s a min-max optimization formulation where the Generator wants to minimize the objective function whereas the Discriminator wants to maximize the same objective function [<a href="#bibliography">6</a>]. Figure 5 describes the previous explanation. Some examples of frequent GANs are:</p>
+
+<ul>
+<li><a href="https://arxiv.org/abs/1703.10593">CycleGAN</a></li>
+<li><a href="https://arxiv.org/pdf/1812.04948.pdf">StyleGAN</a></li>
+<li><a href="https://arxiv.org/pdf/1601.06759.pdf">pixelRNN</a></li>
+<li><a href="https://arxiv.org/pdf/1605.05396.pdf">text-2-image</a></li>
+<li><a href="https://arxiv.org/pdf/1611.04076.pdf">lsGAN</a></li>
+</ul>
+
+<p><center>
+<img src="../images/gan.png" alt="drawing" width="600"/></p>
+
+<p><em>Figure 5: GAN framework by [<a href="#bibliography">6</a>].</em>
+</center></p>
+
+<p>The GANs has as main <strong>advantages</strong> the efficient training of classifiers in a semi-supervised manner, being the generated data almost indistinguishable from the original data, and also they do not introduce any deterministic bias, unlike variational autoencoders. The main <strong>disadvantage</strong> includes requiring high times to train the system [<a href="#bibliography">4</a>]. Further discussion about the challenges in generative modelling may be found in the original paper [<a href="#bibliography">5</a>].</p>
+
+<h1 id="other-architectures">Other Architectures</h1>
+
+<p>Apart from the networks described above, there are many others such as:</p>
+
+<ul>
+<li><a href="https://www.sciencedirect.com/science/article/pii/S2210832717300947">Deep Belief Network (DBN)</a></li>
+<li><a href="https://arxiv.org/abs/1512.03385">Residual Network (ResNet)</a></li>
+<li><a href="http://ufldl.stanford.edu/tutorial/unsupervised/Autoencoders/">Autoencoder</a></li>
+<li><a href="https://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf">Seq2Seq</a></li>
+<li><a href="https://arxiv.org/abs/1602.07360">SqueezeNet</a></li>
+</ul>
+
+<h2 id="extra-resources">Extra Resources</h2>
+
+<ul>
+<li>This exhaustive <a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs">blogpost</a> about LSTMs;</li>
+<li>The <a href="https://www.youtube.com/watch?v=Sw9r8CL98N0">video</a> about Generative Adversarial Networks from Computerphile;</li>
+<li>This <a href="https://pathmind.com/wiki/generative-adversarial-network-gan">blogpost</a> with a complete literature about GANs;</li>
+<li>The <a href="https://www.amazon.com/Deep-Learning-Python-Francois-Chollet/dp/1617294438">Deep Learning with Python</a> book by Francois Chollet.</li>
+</ul>
+
+<h1 id="bibliography">Bibliography</h1>
+
+<div class='bibliography'> <!--chicago style-->
+    [1] “Deep Learning Architectures.” IBM Developer. Accessed May 27, 2020. <a href="https://developer.ibm.com/technologies/artificial-intelligence/articles/cc-machine-learning-deep-learning-architectures/">https://developer.ibm.com/technologies/artificial-intelligence/articles/cc-machine-learning-deep-learning-architectures/</a>. 
+    <br><br>
+    [2] Lecun, Y., L. Bottou, Y. Bengio, and P. Haffner. “Gradient-Based Learning Applied to Document Recognition.” Proceedings of the IEEE 86, no. 11 (1998): 2278–2324. <a href="https://doi.org/10.1109/5.726791">https://doi.org/10.1109/5.726791</a>.
+    <br><br>
+    [3] Saha, Sumit. “A Comprehensive Guide to Convolutional Neural Networks - the ELI5 Way.” Medium. Towards Data Science, December 17, 2018. <a href="https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53">https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53</a>.
+    <br><br>
+    [4] Varangaonkar, Amey, Amey Varangaonkar, Richard Gall, Savia Lobo, Vincy Davis, Amey Varangaonkar Data Science Enthusiast, Manchester United, and Manchester United. “Top 5 Deep Learning Architectures.” Packt Hub, September 21, 2018. <a href="https://hub.packtpub.com/top-5-deep-learning-architectures/">https://hub.packtpub.com/top-5-deep-learning-architectures</a>.
+    <br><br>
+    [5] Goodfellow, Ian J., Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, and Yoshua Bengio. 2014. “Generative Adversarial Nets.” In Advances in Neural Information Processing Systems, 3:2672–80. Neural information processing systems foundation.
+    <br><br>
+    [6] freeCodeCamp.org. “An Intuitive Introduction to Generative Adversarial Networks (GANs).” freeCodeCamp.org. freeCodeCamp.org, April 7, 2020. <a href="https://www.freecodecamp.org/news/an-intuitive-introduction-to-generative-adversarial-networks-gans-7a2264a81394/">https://www.freecodecamp.org/news/an-intuitive-introduction-to-generative-adversarial-networks-gans-7a2264a81394</a>.
+    <br><br>
+    [7] “6 GAN Architectures You Really Should Know.” neptune.ai, May 20, 2020. <a href="https://neptune.ai/blog/6-gan-architectures">https://neptune.ai/blog/6-gan-architectures</a>.
+    <br><br>
+</div>
+
+  </section>
+  
+  <div class="clearfix">
+    
+      <div class="post-date pull-left">
+        <span class="small">
+          Posted on
+          May 29, 2020 at 10:23
+        </span>
+    </div>
+    
+    <div class="pull-right">
+      
+        
+          <span class="post-tag small"><a href="/tags/machine-learning/">#Machine Learning</a></span>
+        
+      
+    </div>
+  </div>
+  <footer>
+    
+      
+        <div class="delimiter"></div>
+        <section class="author-info">
+          
+          <div class="author-meta">
+            
+              <h3 class="author-name text-primary">Inês Gomes</h3>
+            
+            
+              <div class="author-bio">Portuguese Data Scientist exploring this brave new world of Data!</div>
+            
+            <div class="sns-links hidden-print">
+  
+    <a href="mailto:gomes.inesisabel@gmail.com">
+      <i class="fa fa-envelope"></i>
+    </a>
+  
+  
+  
+  
+  
+  
+    <a href="https://github.com/inesgomes" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+  
+  
+  
+  
+  
+  
+    <a href="https://linkedin.com/in/inesgomes778" target="_blank">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  
+  
+  <a href="https://www.kaggle.com/inesgomes" target="_blank">
+    <i class="fab fa-kaggle"></i>
+  </a>
+  
+  
+</div>
+
+            
+        </section>
+      
+	
+    
+    <div class="delimiter"></div>
+    <div class="pager-container">
+      
+        <a class="btn btn-primary btn-older-posts" href="/posts/transfer-learning/">
+          <div>
+            <span aria-hidden="true">&larr;</span> Older Posts
+          </div>
+        </a>
+      
+      
+        <a class="btn btn-primary btn-newer-posts disabled" href="#">
+          <div>
+            Newer Posts <span aria-hidden="true">&rarr;</span>
+          </div>
+        </a>
+      
+    </div>
+    
+  </footer>
+</article>
+<div class="delimiter"></div>
+
+  </main>
+  <footer class="container global-footer">
+    <div class="copyright-note pull-left">
+      
+    </div>
+  </footer>
+
+  
+  
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163800541-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163800541-1');
+  </script>
+
+
+  
+
+  
+  
+
+  
+</body>
+</html>
+
